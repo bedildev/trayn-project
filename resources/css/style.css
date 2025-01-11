@@ -1,0 +1,242 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Styling untuk Thumbnails */
+.img_thumbnail {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.img_thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.img_thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.img_thumbnail:hover img {
+    transform: scale(1.08);
+}
+
+.img_thumbnail .caption {
+    margin: 12px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Dropdown Cart */
+.dropdown {
+    float: right;
+    padding-right: 20px;
+}
+
+.btn {
+    border: 0;
+    margin: 10px 0;
+    box-shadow: none !important;
+    font-size: 14px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #1e88e5;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+/* Dropdown Menu */
+.dropdown .dropdown-menu {
+    padding: 15px;
+    top: 10px !important;
+    width: 380px !important;
+    left: -130px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    background-color: #fff;
+    border: none;
+}
+
+.total-header-section {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.total-section p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 12px 0;
+}
+
+.cart-detail {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-detail:last-child {
+    border-bottom: none;
+}
+
+.cart-detail-img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.cart-detail-product p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-detail .price {
+    font-size: 14px;
+    color: #28a745;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.cart-detail .count {
+    font-size: 13px;
+    color: #666;
+}
+
+.checkout {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.checkout .btn-primary {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Triangle Indicator for Dropdown */
+.dropdown-menu:before {
+    content: " ";
+    position: absolute;
+    top: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+}
+
+/* Styling untuk Product List */
+.productlist {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productlist:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #1e88e5;
+    border: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1200px) {
+    .dropdown .dropdown-menu {
+        width: 450px !important;
+        left: -180px !important;
+    }
+
+    .cart-detail-img img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .productlist {
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+
+    .checkout .btn-primary {
+        width: 100%;
+    }
+}
